@@ -345,6 +345,21 @@ npm run insert
 
 ## ✅ 6. Script de base de datos (IMPORTANTE)
 
+-- Database: api-videojuegos
+
+-- DROP DATABASE IF EXISTS "api-videojuegos";
+
+CREATE DATABASE "api-videojuegos"
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Spanish_Colombia.1252'
+    LC_CTYPE = 'Spanish_Colombia.1252'
+    LOCALE_PROVIDER = 'libc'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
 Debes tener esta tabla en PostgreSQL:
 
 CREATE TABLE videojuegos (
