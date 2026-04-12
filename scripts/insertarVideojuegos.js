@@ -18,6 +18,7 @@ const insertarVideojuegos = async () => {
       ('Call of Duty: Warzone', 'Battle Royale', 'Multiplataforma', 0.00, '2020-03-10', 'Infinity Ward', 'Battle royale gratuito'),
       ('Red Dead Redemption 2', 'Aventura', 'PS4', 59.99, '2018-10-26', 'Rockstar Games', 'Historia del viejo oeste'),
       ('The Witcher 3: Wild Hunt', 'RPG', 'PC', 39.99, '2015-05-19', 'CD Projekt Red', 'Historia de Geralt de Rivia')
+      ON CONFLICT (nombre) DO NOTHING
     RETURNING *;
     `;
 

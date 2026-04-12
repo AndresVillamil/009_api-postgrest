@@ -342,3 +342,23 @@ npm run insert
 ✔ Devuelve los datos insertados (RETURNING *)
 ✔ Muestra resultado en consola (console.table)
 ✔ Cierra conexión correctamente
+
+## ✅ 6. Script de base de datos (IMPORTANTE)
+
+Debes tener esta tabla en PostgreSQL:
+
+CREATE TABLE videojuegos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    genero VARCHAR(50) NOT NULL,
+    plataforma VARCHAR(50) NOT NULL,
+    precio NUMERIC(10,2) NOT NULL,
+    fecha_lanzamiento DATE,
+    desarrollador VARCHAR(100),
+    descripcion TEXT
+);
+
+ALTER TABLE videojuegos ADD CONSTRAINT unique_nombre UNIQUE (nombre);
+
+Tener en cuenta en el insert del Script
+ON CONFLICT (nombre) DO NOTHING
